@@ -7,9 +7,153 @@
         "x": 0,
         "y": 0
       },
-      "nodes": [],
+      "nodes": [
+        {
+          "location": {
+            "x": 1504.8006384122259,
+            "y": 416.1417160474025
+          },
+          "nodeIndex": "dim_bridge_equipment",
+          "nodeLineageTag": "ed1562c0-08b2-47fc-a2a4-82dc91b3cc51",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 633.36793498273312,
+            "y": 282.97845219921771
+          },
+          "nodeIndex": "dim_car",
+          "nodeLineageTag": "f84642f1-507c-48b1-bf85-875f374afa92",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 343.36731773491988,
+            "y": -10
+          },
+          "nodeIndex": "dim_customer",
+          "nodeLineageTag": "e972a52a-9c4e-4ebd-809f-ebb8baef00c2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1220.6158872315959,
+            "y": 361.20682522474453
+          },
+          "nodeIndex": "dim_equipment",
+          "nodeLineageTag": "bcb5cd98-3d7d-4da3-9dd5-659014303525",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1788.9775266469558,
+            "y": 441.46670867983767
+          },
+          "nodeIndex": "dim_equipment_group",
+          "nodeLineageTag": "3b97a124-42eb-428d-856b-80aefea850e9",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 22.382228932102407,
+            "y": 174.57852820214765
+          },
+          "nodeIndex": "dim_rental_date",
+          "nodeLineageTag": "0cb7ad99-1779-49f3-9372-f3e2e2efeeed",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 936.61588723159593,
+            "y": 284.5218826824858
+          },
+          "nodeIndex": "dim_service_date",
+          "nodeLineageTag": "7d01664c-3e33-439a-909e-e9dc07908de2",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 299.92870161999963,
+            "y": 708.413650449489
+          },
+          "nodeIndex": "dim_staff",
+          "nodeLineageTag": "2307a1c9-cb6b-45c9-af4b-533b9c7b33a9",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 10,
+            "y": 503.28989139599526
+          },
+          "nodeIndex": "dim_store",
+          "nodeLineageTag": "e2a9485a-f7b1-447e-a1aa-4f13698ab7ec",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 312.31288399786337,
+            "y": 347.28261416845095
+          },
+          "nodeIndex": "fact_rental",
+          "nodeLineageTag": "d90626ac-1919-4b8d-b459-03b3ad55375d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 818.05550670990965,
+            "y": 6.2573671535808444
+          },
+          "nodeIndex": "fact_service",
+          "nodeLineageTag": "fc011012-d0e8-4c5b-b30c-1f2c3190fb88",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
       "name": "All tables",
-      "zoomValue": 100,
+      "zoomValue": 50.346892102823091,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
