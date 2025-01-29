@@ -1,0 +1,3 @@
+'dim_customer'[customer_age] = ROUNDDOWN(YEARFRAC('dim_customer'[customer_birth_date],'dim_customer'[Today's_date],1),0)
+
+

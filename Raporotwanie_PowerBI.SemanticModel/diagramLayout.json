@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 1504.8006384122259,
-            "y": 416.1417160474025
+            "x": 1105.5704345110614,
+            "y": 749.82666259165944
           },
           "nodeIndex": "dim_bridge_equipment",
           "nodeLineageTag": "ed1562c0-08b2-47fc-a2a4-82dc91b3cc51",
@@ -29,7 +29,7 @@
           "nodeIndex": "dim_car",
           "nodeLineageTag": "f84642f1-507c-48b1-bf85-875f374afa92",
           "size": {
-            "height": 272,
+            "height": 373.29721591522093,
             "width": 234
           },
           "zIndex": 0
@@ -49,8 +49,8 @@
         },
         {
           "location": {
-            "x": 1220.6158872315959,
-            "y": 361.20682522474453
+            "x": 1365.6099413847551,
+            "y": 450.58672162052767
           },
           "nodeIndex": "dim_equipment",
           "nodeLineageTag": "bcb5cd98-3d7d-4da3-9dd5-659014303525",
@@ -62,8 +62,8 @@
         },
         {
           "location": {
-            "x": 1788.9775266469558,
-            "y": 441.46670867983767
+            "x": 762.10182805540285,
+            "y": 745.35835642550023
           },
           "nodeIndex": "dim_equipment_group",
           "nodeLineageTag": "3b97a124-42eb-428d-856b-80aefea850e9",
@@ -101,8 +101,8 @@
         },
         {
           "location": {
-            "x": 299.92870161999963,
-            "y": 708.413650449489
+            "x": 288.01138210056189,
+            "y": 877.24234364152369
           },
           "nodeIndex": "dim_staff",
           "nodeLineageTag": "2307a1c9-cb6b-45c9-af4b-533b9c7b33a9",
@@ -133,7 +133,7 @@
           "nodeIndex": "fact_rental",
           "nodeLineageTag": "d90626ac-1919-4b8d-b459-03b3ad55375d",
           "size": {
-            "height": 300,
+            "height": 446.98027407306563,
             "width": 234
           },
           "zIndex": 0

@@ -188,6 +188,13 @@
         "fromTable": "fact_rental",
         "toColumn": "sk_staff",
         "toTable": "dim_staff"
+      },
+      {
+        "name": "72ca73ac-a3b0-47d7-63f0-2c1df9cf5e52",
+        "fromColumn": "sk_equipment_group",
+        "fromTable": "fact_rental",
+        "toColumn": "id_equipment_group",
+        "toTable": "dim_equipment_group"
       }
     ],
     "sourceQueryCulture": "en-GB",
@@ -564,6 +571,19 @@
                 "relationship": "76518c57-541c-422e-bc31-d7dd70fdcb2b"
               }
             ]
+          },
+          {
+            "name": "Today's_date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3fc62d47-c967-4a18-9109-9738ce3cb490",
+            "sourceColumn": "Today's_date",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "e972a52a-9c4e-4ebd-809f-ebb8baef00c2",
@@ -577,9 +597,13 @@
                 "    Source = Databricks.Catalogs(\"adb-3646568185095873.13.azuredatabricks.net\", \"sql/protocolv1/o/3646568185095873/1215-103739-v79x5g3\", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),",
                 "    hive_metastore_Database = Source{[Name=\"hive_metastore\",Kind=\"Database\"]}[Data],",
                 "    gold_Schema = hive_metastore_Database{[Name=\"gold\",Kind=\"Schema\"]}[Data],",
-                "    dim_customer_Table = gold_Schema{[Name=\"dim_customer\",Kind=\"Table\"]}[Data]",
+                "    dim_customer_Table = gold_Schema{[Name=\"dim_customer\",Kind=\"Table\"]}[Data],",
+                "    #\"Filtered Rows\" = Table.SelectRows(dim_customer_Table, each true),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Filtered Rows\",\"Czechia\",\"Czech Republic\",Replacer.ReplaceText,{\"customer_country\"}),",
+                "    #\"Filtered Rows1\" = Table.SelectRows(#\"Replaced Value\", each true),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Filtered Rows1\", \"Today's_date\", each Date.From(DateTime.LocalNow()))",
                 "in",
-                "    dim_customer_Table"
+                "    #\"Added Custom\""
               ],
               "type": "m"
             }
@@ -1684,14 +1708,14 @@
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               }
             ],
             "dataType": "int64",
             "formatString": "0",
             "lineageTag": "821b0e63-b887-4b54-b939-8e0231defea7",
             "sourceColumn": "rental_year",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "rental_quarter",
@@ -3196,7 +3220,7 @@
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               }
             ],
             "dataType": "int64",
