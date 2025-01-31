@@ -377,7 +377,7 @@
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               }
             ],
             "dataType": "int64",
@@ -543,6 +543,7 @@
                 "value": "Automatic"
               }
             ],
+            "dataCategory": "Place",
             "dataType": "string",
             "lineageTag": "c010e196-2e02-47cf-a717-3842b88e79d2",
             "sourceColumn": "customer_country",
@@ -3005,14 +3006,14 @@
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               }
             ],
             "dataType": "int64",
             "formatString": "0",
             "lineageTag": "a4afc121-166d-40ff-874a-5bb5e350804d",
             "sourceColumn": "id_rental",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "id_rental_date",
@@ -3252,7 +3253,7 @@
             "formatString": "0",
             "lineageTag": "30585b6e-cf84-411a-b24b-404409f2c8ec",
             "sourceColumn": "rental_duration",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "rental_load_date",
@@ -3281,6 +3282,14 @@
           }
         ],
         "lineageTag": "d90626ac-1919-4b8d-b459-03b3ad55375d",
+        "measures": [
+          {
+            "name": "returning_customers",
+            "expression": "countrows(filter(distinct(fact_rental[sk_customer]),calculate(DISTINCTCOUNT(fact_rental[id_rental]))>2))",
+            "formatString": "0",
+            "lineageTag": "0fe69a8d-d6e6-4ec9-b9fc-9925b772edec"
+          }
+        ],
         "partitions": [
           {
             "name": "fact_rental",

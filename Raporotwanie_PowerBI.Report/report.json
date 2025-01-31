@@ -1,7 +1,33 @@
 {
-  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.61\",\"type\":2}},\"activeSectionIndex\":3,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.61\",\"type\":2},\"customTheme\":{\"name\":\"Custom3154863746951111.json\",\"version\":\"5.61\",\"type\":1}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
   "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "f5f9092d580270650636",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "0e8cae0e2b476e70b43a"
+    },
+    {
+      "boundSection": "c109420001d9a9ee3edb",
+      "config": "{}",
+      "name": "f0e33dde25063274991b"
+    }
+  ],
   "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Custom3154863746951111.json",
+            "path": "Custom3154863746951111.json",
+            "type": 201
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    },
     {
       "resourcePackage": {
         "disabled": false,
@@ -19,106 +45,95 @@
   ],
   "sections": [
     {
-      "config": "{}",
-      "displayName": "Page 1analiz aklientów powracajacych",
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"181L\"}}}}}]}}",
+      "displayName": "Klienci powracajacy",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
       "name": "53b472f00aeca1e09244",
-      "ordinal": 3,
-      "visualContainers": [],
-      "width": 1280.00
-    },
-    {
-      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"285L\"}}}}}]}}",
-      "displayName": "skad klienci wyszli",
-      "displayOption": 1,
-      "filters": "[]",
-      "height": 720.00,
-      "name": "78a01f0e6cdb07b73132",
+      "ordinal": 4,
       "visualContainers": [
         {
-          "config": "{\"name\":\"0a01f740b0679620c65e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":640.2709479923145,\"y\":13.338978083173219,\"z\":1000,\"width\":277.45074413000293,\"height\":280.11853974663757,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_country\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}],\"Series\":[{\"queryRef\":\"dim_rental_date.rental_year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_rental_date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_country\"},\"Name\":\"dim_customer.customer_country\",\"NativeReferenceName\":\"customer_country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"rental_year\"},\"Name\":\"dim_rental_date.rental_year\",\"NativeReferenceName\":\"rental_year\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"10ee0f35732104946b50\",\"layouts\":[{\"id\":0,\"position\":{\"x\":39.30104253159885,\"y\":0,\"z\":3000,\"width\":1215.3091613617491,\"height\":87.6715564166436,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Łączna liczba klientów powracających wyniosła 8552. W tabelce znajduje się zestawienie ilości wypożyczeń dokonanych przez klientów powracających w rozbiciu na poszczególne lata działalności. \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\"}}]}]}}]}}}",
           "filters": "[]",
-          "height": 280.12,
-          "width": 277.45,
-          "x": 640.27,
-          "y": 13.34,
-          "z": 1000.00
-        },
-        {
-          "config": "{\"name\":\"1c57fdbda774e76184dc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":322.8032696127919,\"y\":13.338978083173219,\"z\":4000,\"width\":280.11853974663757,\"height\":280.11853974663757,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_country\",\"active\":true}],\"Size\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_country\"},\"Name\":\"dim_customer.customer_country\",\"NativeReferenceName\":\"customer_country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"mapControls\":[{\"properties\":{}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 280.12,
-          "width": 280.12,
-          "x": 322.80,
-          "y": 13.34,
-          "z": 4000.00
-        },
-        {
-          "config": "{\"name\":\"416aa4b2b795ca210b1d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.583752544514379,\"y\":279.8455742998199,\"z\":3000,\"width\":281.7623248087227,\"height\":279.8455742998199,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_country\",\"active\":true},{\"queryRef\":\"dim_customer.customer_birth_date.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"dim_customer.customer_birth_date.Variation.Date Hierarchy.Quarter\",\"active\":true},{\"queryRef\":\"dim_customer.customer_birth_date.Variation.Date Hierarchy.Month\",\"active\":true},{\"queryRef\":\"dim_customer.customer_birth_date.Variation.Date Hierarchy.Day\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_country\"},\"Name\":\"dim_customer.customer_country\",\"NativeReferenceName\":\"customer_country\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"customer_birth_date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"dim_customer.customer_birth_date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"customer_birth_date Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"customer_birth_date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Quarter\"},\"Name\":\"dim_customer.customer_birth_date.Variation.Date Hierarchy.Quarter\",\"NativeReferenceName\":\"customer_birth_date Quarter\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"customer_birth_date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"dim_customer.customer_birth_date.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"customer_birth_date Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"customer_birth_date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"dim_customer.customer_birth_date.Variation.Date Hierarchy.Day\",\"NativeReferenceName\":\"customer_birth_date Day\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}}}]}}}",
-          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_rental\"}},\"Property\":\"rental_amount\"}},\"Function\":0}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"100000L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false},{\"name\":\"a875fab2a37e33501d50\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer\"}},\"Property\":\"customer_country\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_country\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Poland'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
-          "height": 279.85,
-          "width": 281.76,
-          "x": 9.58,
-          "y": 279.85,
+          "height": 87.67,
+          "width": 1215.31,
+          "x": 39.30,
+          "y": 0.00,
           "z": 3000.00
         },
         {
-          "config": "{\"name\":\"982e9951892340726eb3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":979.0809913049143,\"y\":13.338978083173219,\"z\":2000,\"width\":282.78633536327226,\"height\":280.11853974663757,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_country\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}],\"Series\":[{\"queryRef\":\"dim_customer.customer_city\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_country\"},\"Name\":\"dim_customer.customer_country\",\"NativeReferenceName\":\"customer_country\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_city\"},\"Name\":\"dim_customer.customer_city\",\"NativeReferenceName\":\"customer_city\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}},{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_city\"}}}]},\"autoSelectVisualType\":false,\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}}}]}}}",
-          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_rental\"}},\"Property\":\"rental_amount\"}},\"Function\":0}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"520000L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false},{\"name\":\"a875fab2a37e33501d50\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer\"}},\"Property\":\"customer_country\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_country\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Poland'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
-          "height": 280.12,
-          "width": 282.79,
-          "x": 979.08,
-          "y": 13.34,
-          "z": 2000.00
+          "config": "{\"name\":\"71c0c204cc9e9c50042d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":39.30104253159885,\"y\":102.78734200572009,\"z\":1000,\"width\":229.75994095396254,\"height\":125.4610203893348,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_rental.returning_customers\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"returning_customers\"},\"Name\":\"fact_rental.returning_customers\",\"NativeReferenceName\":\"returning_customers\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"returning_customers\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 125.46,
+          "width": 229.76,
+          "x": 39.30,
+          "y": 102.79,
+          "z": 1000.00
         },
         {
-          "config": "{\"name\":\"f6467d6dd1eee0880035\",\"layouts\":[{\"id\":0,\"position\":{\"x\":13.338978083173219,\"y\":13.338978083173219,\"z\":0,\"width\":280.11853974663757,\"height\":280.11853974663757,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_country\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_country\"},\"Name\":\"dim_customer.customer_country\",\"NativeReferenceName\":\"customer_country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"borderShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":0}}}}}}}],\"categoryAxis\":[{\"properties\":{\"innerPadding\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 280.12,
-          "width": 280.12,
-          "x": 13.34,
-          "y": 13.34,
+          "config": "{\"name\":\"9ac19fef00ac267b33b4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":39.30104253159885,\"y\":244.87572654303904,\"z\":0,\"width\":594.0503736507058,\"height\":461.03146046683275,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"dim_customer.sk_customer\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(fact_rental.id_rental)\"}],\"Columns\":[{\"queryRef\":\"dim_rental_date.rental_year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_rental_date\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"id_rental\"}},\"Function\":2},\"Name\":\"Sum(fact_rental.id_rental)\",\"NativeReferenceName\":\"Count of id_rental\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"sk_customer\"},\"Name\":\"dim_customer.sk_customer\",\"NativeReferenceName\":\"sk_customer\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"rental_year\"},\"Name\":\"dim_rental_date.rental_year\",\"NativeReferenceName\":\"rental_year\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"sk_customer\"}}}]},\"autoSelectVisualType\":false,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_rental\"}},\"Property\":\"id_rental\"}},\"Function\":2}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"id_rental\"}},\"Function\":2}},\"Right\":{\"Literal\":{\"Value\":\"2L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false},{\"name\":\"962cb6e2a042b5070216\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer\"}},\"Property\":\"sk_customer\"}},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 461.03,
+          "width": 594.05,
+          "x": 39.30,
+          "y": 244.88,
           "z": 0.00
         }
       ],
       "width": 1280.00
     },
     {
-      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"298L\"}}}}}]}}",
-      "displayName": "wiek klientów",
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"285L\"}}}}}]}}",
+      "displayName": "Kim są klienci 1",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
-      "name": "f037b8e4a3c6c03e1c10",
-      "ordinal": 1,
+      "name": "78a01f0e6cdb07b73132",
       "visualContainers": [
         {
-          "config": "{\"name\":\"148beda3651286b9b2c2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":290.66175732217573,\"y\":0,\"z\":1000,\"width\":279.6933891213389,\"height\":279.6933891213389,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedAreaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_age\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}],\"Series\":[{\"queryRef\":\"dim_rental_date.rental_weekday\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_rental_date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_age\"},\"Name\":\"dim_customer.customer_age\",\"NativeReferenceName\":\"customer_age\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"rental_weekday\"},\"Name\":\"dim_rental_date.rental_weekday\",\"NativeReferenceName\":\"rental_weekday\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"0a01f740b0679620c65e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":33.21550341878767,\"y\":386.5076761458929,\"z\":1000,\"width\":570.7027405591699,\"height\":332.1550341878767,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_country\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}],\"Series\":[{\"queryRef\":\"dim_rental_date.rental_year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_rental_date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_country\"},\"Name\":\"dim_customer.customer_country\",\"NativeReferenceName\":\"customer_country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"rental_year\"},\"Name\":\"dim_rental_date.rental_year\",\"NativeReferenceName\":\"rental_year\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 279.69,
-          "width": 279.69,
-          "x": 290.66,
-          "y": 0.00,
+          "height": 332.16,
+          "width": 570.70,
+          "x": 33.22,
+          "y": 386.51,
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"3e80434922c0db78ec32\",\"layouts\":[{\"id\":0,\"position\":{\"x\":589.5497907949791,\"y\":0,\"z\":2000,\"width\":279.6933891213389,\"height\":279.6933891213389,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_age\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}],\"Series\":[{\"queryRef\":\"dim_rental_date.rental_year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_rental_date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_age\"},\"Name\":\"dim_customer.customer_age\",\"NativeReferenceName\":\"customer_age\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"rental_year\"},\"Name\":\"dim_rental_date.rental_year\",\"NativeReferenceName\":\"rental_year\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"1c57fdbda774e76184dc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":455.958274203358,\"y\":10.568569269614258,\"z\":3000,\"width\":369.899924436499,\"height\":363.86074199671947,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_country\",\"active\":true}],\"Size\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_country\"},\"Name\":\"dim_customer.customer_country\",\"NativeReferenceName\":\"customer_country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"mapControls\":[{\"properties\":{}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
-          "height": 279.69,
-          "width": 279.69,
-          "x": 589.55,
-          "y": 0.00,
+          "height": 363.86,
+          "width": 369.90,
+          "x": 455.96,
+          "y": 10.57,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"730ff3eeec03034565e6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16.607751709393835,\"y\":46.80366390829172,\"z\":4000,\"width\":406.1350190751765,\"height\":282.3317790596952,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Wypożyczalnia ma klientów z wielu krajów Europy, jednak zdecydowanie dominują wypożący z Polski, a dalszej koleności również z Niemiec i Czech.\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\"}}]},{\"textRuns\":[{\"value\":\"Najwiecej transakcji wypożyczeń miało miejsce 2022 i 2023 roku.\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\"}}]},{\"textRuns\":[{\"value\":\"Tabela przedstawia 10 miast z Polski, z których pochodzi najwiecej klientów Wypożyczalni.\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 282.33,
+          "width": 406.14,
+          "x": 16.61,
+          "y": 46.80,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"982e9951892340726eb3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":706.5843454542104,\"y\":386.5076761458929,\"z\":2000,\"width\":558.6243756796108,\"height\":332.1550341878767,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_customer.customer_country\"},{\"queryRef\":\"Sum(fact_rental.rental_amount)\"},{\"queryRef\":\"dim_customer.customer_city\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_country\"},\"Name\":\"dim_customer.customer_country\",\"NativeReferenceName\":\"customer_country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_city\"},\"Name\":\"dim_customer.customer_city\",\"NativeReferenceName\":\"customer_city\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{}}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_rental\"}},\"Property\":\"rental_amount\"}},\"Function\":0}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"520000L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false},{\"name\":\"a875fab2a37e33501d50\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer\"}},\"Property\":\"customer_country\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_country\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Poland'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 332.16,
+          "width": 558.62,
+          "x": 706.58,
+          "y": 386.51,
           "z": 2000.00
         },
         {
-          "config": "{\"name\":\"f961d43c2de44c130902\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"width\":280,\"height\":280,\"z\":0,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_age\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_age\"},\"Name\":\"dim_customer.customer_age\",\"NativeReferenceName\":\"customer_age\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"f6467d6dd1eee0880035\",\"layouts\":[{\"id\":0,\"position\":{\"x\":848.5051327890304,\"y\":10.568569269614258,\"z\":0,\"width\":398.586041025452,\"height\":363.86074199671947,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_country\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_country\"},\"Name\":\"dim_customer.customer_country\",\"NativeReferenceName\":\"customer_country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"borderShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":0}}}}}}}],\"categoryAxis\":[{\"properties\":{\"innerPadding\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
           "filters": "[]",
-          "height": 280.00,
-          "width": 280.00,
-          "x": 10.00,
-          "y": 0.00,
+          "height": 363.86,
+          "width": 398.59,
+          "x": 848.51,
+          "y": 10.57,
           "z": 0.00
         }
       ],
@@ -126,7 +141,103 @@
     },
     {
       "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"313L\"}}}}}]}}",
-      "displayName": "jakie robią transkacje",
+      "displayName": "Transakcje 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "c109420001d9a9ee3edb",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3518b160b3320a40cc20\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":30.44221479004088,\"z\":3000,\"width\":639.2865105908585,\"height\":238.16556276914335,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Jeśłi chodzi o czas wypożyczenia aut, dominuje wynajem krótkoterminowy, na czas od 1 do 5 dni (najczęściej 2 dni). Udział wypożyczeń dłuższych niż 5 dni spada wraz z wydłużaniem się okresu wynajmu, aczkolwiek lokalne maksimum jest obserwowane dla wypożyczeń na 10 dni. Trendy te są takie same w każdym roku i niezależne od marki wypożyczanego auta.\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 238.17,
+          "width": 639.29,
+          "x": 0.00,
+          "y": 30.44,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"7d71e162087198e7a19a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":426.1910070605723,\"y\":343.8179552757558,\"z\":1000,\"width\":426.1910070605723,\"height\":376.0508885828579,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"stackedAreaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fact_rental.rental_duration\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(fact_rental.rental_amount)\"}],\"Series\":[{\"queryRef\":\"dim_rental_date.rental_year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_rental_date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_duration\"},\"Name\":\"fact_rental.rental_duration\",\"NativeReferenceName\":\"Sum of rental_duration\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5},\"Name\":\"CountNonNull(fact_rental.rental_amount)\",\"NativeReferenceName\":\"rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"rental_year\"},\"Name\":\"dim_rental_date.rental_year\",\"NativeReferenceName\":\"rental_year\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 376.05,
+          "width": 426.19,
+          "x": 426.19,
+          "y": 343.82,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"a1ffb5fa2357a9c0643b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":343.8179552757558,\"z\":0,\"width\":426.1910070605723,\"height\":376.0508885828579,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"stackedAreaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fact_rental.rental_duration\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(fact_rental.rental_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_duration\"},\"Name\":\"fact_rental.rental_duration\",\"NativeReferenceName\":\"Sum of rental_duration\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5},\"Name\":\"CountNonNull(fact_rental.rental_amount)\",\"NativeReferenceName\":\"rental_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 376.05,
+          "width": 426.19,
+          "x": 0.00,
+          "y": 343.82,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"ecac6d4fe90c00165a79\",\"layouts\":[{\"id\":0,\"position\":{\"x\":852.3820141211446,\"y\":30.44221479004088,\"z\":2000,\"width\":410.07454040702123,\"height\":689.4266290685729,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"stackedAreaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fact_rental.rental_duration\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(fact_rental.rental_amount)\"}],\"Rows\":[{\"queryRef\":\"dim_car.car_producer\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_car\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_duration\"},\"Name\":\"fact_rental.rental_duration\",\"NativeReferenceName\":\"Sum of rental_duration\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5},\"Name\":\"CountNonNull(fact_rental.rental_amount)\",\"NativeReferenceName\":\"rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"car_producer\"},\"Name\":\"dim_car.car_producer\",\"NativeReferenceName\":\"car_producer\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"gridlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 689.43,
+          "width": 410.07,
+          "x": 852.38,
+          "y": 30.44,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"298L\"}}}}}]}}",
+      "displayName": "Kim są klienci 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "f037b8e4a3c6c03e1c10",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"148beda3651286b9b2c2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":855.5853781795721,\"y\":288.2617403185655,\"z\":1000,\"width\":424.72607483107794,\"height\":412.45961779624537,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedAreaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_age\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}],\"Series\":[{\"queryRef\":\"dim_rental_date.rental_weekday\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_rental_date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_age\"},\"Name\":\"dim_customer.customer_age\",\"NativeReferenceName\":\"customer_age\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"rental_weekday\"},\"Name\":\"dim_rental_date.rental_weekday\",\"NativeReferenceName\":\"rental_weekday\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 412.46,
+          "width": 424.73,
+          "x": 855.59,
+          "y": 288.26,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"3e80434922c0db78ec32\",\"layouts\":[{\"id\":0,\"position\":{\"x\":430.8593033484942,\"y\":289.7950474479196,\"z\":2000,\"width\":424.72607483107794,\"height\":412.45961779624537,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_age\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}],\"Series\":[{\"queryRef\":\"dim_rental_date.rental_year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_rental_date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_age\"},\"Name\":\"dim_customer.customer_age\",\"NativeReferenceName\":\"customer_age\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"rental_year\"},\"Name\":\"dim_rental_date.rental_year\",\"NativeReferenceName\":\"rental_year\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 412.46,
+          "width": 424.73,
+          "x": 430.86,
+          "y": 289.80,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"77a17c466c01a17660a6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":52.13244239803845,\"z\":3000,\"width\":1280.31145301065,\"height\":165.59716997023978,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"W całym  okresie działania wypożyczalni, najwięcej wypożyczeń dokonali klienci w wieku około 40 lat. Zdecydowanie najmniej samochodów wypożyczają kliemnci najmłodis, poniżej 27 roku życia. Prawidłowość ta widoczna jest także w rozbicu n apo szczególne lata, przy czym klienci, którzy aktulani emaja 26 lat i mniej w ogóle nie wypożyczali samochodów  przed 2022 rokiem. Analizując procentowy udział wypożyczeń w poszczególnych dniach tygodnia, generalnie nie widać dużego zróżnicowania ze względu na wiek klientrów, aczkolwiek najmłodsi wypożyczają auta w poniedziałki chetniej niż klienci w wieku powyżej 30 lat.\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\"}}]},{\"textRuns\":[{\"value\":\"\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 165.60,
+          "width": 1280.31,
+          "x": 0.00,
+          "y": 52.13,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"f961d43c2de44c130902\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":288.2617403185655,\"z\":0,\"width\":429.32599621914017,\"height\":412.45961779624537,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customer.customer_age\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_customer\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_age\"},\"Name\":\"dim_customer.customer_age\",\"NativeReferenceName\":\"customer_age\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 412.46,
+          "width": 429.33,
+          "x": 0.00,
+          "y": 288.26,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"313L\"}}}}}]}}",
+      "displayName": "Transakcje 1",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
@@ -134,61 +245,44 @@
       "ordinal": 2,
       "visualContainers": [
         {
-          "config": "{\"name\":\"15ebd171ebe754327aad\",\"layouts\":[{\"id\":0,\"position\":{\"x\":311.49332484631236,\"y\":0,\"z\":1,\"width\":279.9323271746596,\"height\":279.9323271746596,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_car.car_model\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}],\"Series\":[{\"queryRef\":\"dim_car.car_producer\"}],\"Rows\":[{\"queryRef\":\"dim_rental_date.rental_year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_car\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_rental_date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"car_producer\"},\"Name\":\"dim_car.car_producer\",\"NativeReferenceName\":\"car_producer\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"car_model\"},\"Name\":\"dim_car.car_model\",\"NativeReferenceName\":\"car_model\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"rental_year\"},\"Name\":\"dim_rental_date.rental_year\",\"NativeReferenceName\":\"rental_year\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"15ebd171ebe754327aad\",\"layouts\":[{\"id\":0,\"position\":{\"x\":679.1926353708045,\"y\":135.8385270741609,\"z\":1000,\"width\":601.1245163626661,\"height\":551.1609201974575,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_car.car_model\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}],\"Series\":[{\"queryRef\":\"dim_car.car_producer\"}],\"Rows\":[{\"queryRef\":\"dim_rental_date.rental_year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_car\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_rental_date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"car_producer\"},\"Name\":\"dim_car.car_producer\",\"NativeReferenceName\":\"car_producer\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"car_model\"},\"Name\":\"dim_car.car_model\",\"NativeReferenceName\":\"car_model\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"rental_year\"},\"Name\":\"dim_rental_date.rental_year\",\"NativeReferenceName\":\"rental_year\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 279.93,
-          "width": 279.93,
-          "x": 311.49,
-          "y": 0.00,
-          "z": 1.00
+          "height": 551.16,
+          "width": 601.12,
+          "x": 679.19,
+          "y": 135.84,
+          "z": 1000.00
         },
         {
-          "config": "{\"name\":\"3345e31d0e203052709d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":361.1008322941739,\"z\":4,\"width\":280.3282777020561,\"height\":280.3282777020561,\"tabOrder\":4}}],\"singleVisual\":{\"visualType\":\"stackedAreaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fact_rental.rental_duration\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(fact_rental.rental_amount)\"}],\"Series\":[{\"queryRef\":\"dim_rental_date.rental_year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_rental_date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_duration\"},\"Name\":\"fact_rental.rental_duration\",\"NativeReferenceName\":\"Sum of rental_duration\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5},\"Name\":\"CountNonNull(fact_rental.rental_amount)\",\"NativeReferenceName\":\"rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"rental_year\"},\"Name\":\"dim_rental_date.rental_year\",\"NativeReferenceName\":\"rental_year\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"6254b319e97034cb0341\",\"layouts\":[{\"id\":0,\"position\":{\"x\":341.93836125564644,\"y\":15.613623801627691,\"z\":0,\"width\":323.2020126936932,\"height\":291.9747650904378,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_car.car_model\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}],\"Series\":[{\"queryRef\":\"dim_car.car_producer\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_car\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"car_producer\"},\"Name\":\"dim_car.car_producer\",\"NativeReferenceName\":\"car_producer\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"car_model\"},\"Name\":\"dim_car.car_model\",\"NativeReferenceName\":\"car_model\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 280.33,
-          "width": 280.33,
-          "x": 0.00,
-          "y": 361.10,
-          "z": 4.00
-        },
-        {
-          "config": "{\"name\":\"6254b319e97034cb0341\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"width\":280,\"height\":280,\"z\":0,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_car.car_model\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_rental.rental_amount)\"}],\"Series\":[{\"queryRef\":\"dim_car.car_producer\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_car\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"car_producer\"},\"Name\":\"dim_car.car_producer\",\"NativeReferenceName\":\"car_producer\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"car_model\"},\"Name\":\"dim_car.car_model\",\"NativeReferenceName\":\"car_model\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_rental.rental_amount)\",\"NativeReferenceName\":\"Sum of rental_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
-          "filters": "[]",
-          "height": 280.00,
-          "width": 280.00,
-          "x": 10.00,
-          "y": 0.00,
+          "height": 291.97,
+          "width": 323.20,
+          "x": 341.94,
+          "y": 15.61,
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"68875e5cac74d1beb959\",\"layouts\":[{\"id\":0,\"position\":{\"x\":684.1910506626454,\"y\":0,\"z\":2,\"width\":280.3282777020561,\"height\":280.3282777020561,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_car.car_production_year\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(fact_rental.rental_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_car\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"car_production_year\"},\"Name\":\"dim_car.car_production_year\",\"NativeReferenceName\":\"car_production_year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5},\"Name\":\"CountNonNull(fact_rental.rental_amount)\",\"NativeReferenceName\":\"rental_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"68875e5cac74d1beb959\",\"layouts\":[{\"id\":0,\"position\":{\"x\":235.76571940457814,\"y\":334.1315493548326,\"z\":2000,\"width\":409.0769436026455,\"height\":352.8678979167858,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_car.car_production_year\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(fact_rental.rental_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_car\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"car_production_year\"},\"Name\":\"dim_car.car_production_year\",\"NativeReferenceName\":\"car_production_year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5},\"Name\":\"CountNonNull(fact_rental.rental_amount)\",\"NativeReferenceName\":\"rental_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 280.33,
-          "width": 280.33,
-          "x": 684.19,
-          "y": 0.00,
-          "z": 2.00
+          "height": 352.87,
+          "width": 409.08,
+          "x": 235.77,
+          "y": 334.13,
+          "z": 2000.00
         },
         {
-          "config": "{\"name\":\"89bad2e51da70800ed70\",\"layouts\":[{\"id\":0,\"position\":{\"x\":311.21190151668935,\"y\":361.1008322941739,\"z\":5,\"width\":280.3282777020561,\"height\":280.3282777020561,\"tabOrder\":5}}],\"singleVisual\":{\"visualType\":\"stackedAreaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fact_rental.rental_duration\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(fact_rental.rental_amount)\"}],\"Rows\":[{\"queryRef\":\"dim_car.car_producer\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_car\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_duration\"},\"Name\":\"fact_rental.rental_duration\",\"NativeReferenceName\":\"Sum of rental_duration\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5},\"Name\":\"CountNonNull(fact_rental.rental_amount)\",\"NativeReferenceName\":\"rental_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"car_producer\"},\"Name\":\"dim_car.car_producer\",\"NativeReferenceName\":\"car_producer\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"gridlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}]}}}",
+          "config": "{\"name\":\"7dfa233249468c40706a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":28.104522842929843,\"y\":15.613623801627691,\"z\":3000,\"width\":284.167953189624,\"height\":240.44980654506642,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Zarówno w okresie całej działaności wypożyczalni, jak i w ujęciu rocznym, niekwestionawnym liderm rankingu wypożyczeń jest Kia Ceed, a w dalszej kolejności Skoda Octavia oraz Nissan Leaf. Pozostałe modele są wypożycane dwukrotnie rzadziej.\",\"textStyle\":{\"fontWeight\":\"bold\"}}]}]}}]}}}",
           "filters": "[]",
-          "height": 280.33,
-          "width": 280.33,
-          "x": 311.21,
-          "y": 361.10,
-          "z": 5.00
-        },
-        {
-          "config": "{\"name\":\"cf70d2889037a168573a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":964.5193283647014,\"y\":0,\"z\":3,\"width\":280.3282777020561,\"height\":280.3282777020561,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"stackedAreaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fact_rental.rental_duration\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(fact_rental.rental_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_rental\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_duration\"},\"Name\":\"fact_rental.rental_duration\",\"NativeReferenceName\":\"Sum of rental_duration\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5},\"Name\":\"CountNonNull(fact_rental.rental_amount)\",\"NativeReferenceName\":\"rental_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"rental_amount\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
-          "filters": "[]",
-          "height": 280.33,
-          "width": 280.33,
-          "x": 964.52,
-          "y": 0.00,
-          "z": 3.00
+          "height": 240.45,
+          "width": 284.17,
+          "x": 28.10,
+          "y": 15.61,
+          "z": 3000.00
         }
       ],
       "width": 1280.00
     }
-  ]
+  ],
+  "theme": "Custom3154863746951111.json"
 }
