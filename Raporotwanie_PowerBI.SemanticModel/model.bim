@@ -245,14 +245,14 @@
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               }
             ],
             "dataType": "int64",
             "formatString": "0",
             "lineageTag": "06b09d3d-38ab-45c1-ba28-e7040dc20aa2",
             "sourceColumn": "car_production_year",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "car_fuel_type",
@@ -335,9 +335,10 @@
                 "    Source = Databricks.Catalogs(\"adb-3646568185095873.13.azuredatabricks.net\", \"sql/protocolv1/o/3646568185095873/1215-103739-v79x5g3\", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),",
                 "    hive_metastore_Database = Source{[Name=\"hive_metastore\",Kind=\"Database\"]}[Data],",
                 "    gold_Schema = hive_metastore_Database{[Name=\"gold\",Kind=\"Schema\"]}[Data],",
-                "    dim_car_Table = gold_Schema{[Name=\"dim_car\",Kind=\"Table\"]}[Data]",
+                "    dim_car_Table = gold_Schema{[Name=\"dim_car\",Kind=\"Table\"]}[Data],",
+                "    #\"Filtered Rows\" = Table.SelectRows(dim_car_Table, each true)",
                 "in",
-                "    dim_car_Table"
+                "    #\"Filtered Rows\""
               ],
               "type": "m"
             }
@@ -573,16 +574,17 @@
             ]
           },
           {
-            "name": "Today's_date",
+            "name": "customer_age",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               }
             ],
-            "dataType": "string",
-            "lineageTag": "3fc62d47-c967-4a18-9109-9738ce3cb490",
-            "sourceColumn": "Today's_date",
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "af6a418b-72e5-4ff1-9d3d-5734bb7b5efe",
+            "sourceColumn": "customer_age",
             "summarizeBy": "none"
           }
         ],
@@ -601,9 +603,18 @@
                 "    #\"Filtered Rows\" = Table.SelectRows(dim_customer_Table, each true),",
                 "    #\"Replaced Value\" = Table.ReplaceValue(#\"Filtered Rows\",\"Czechia\",\"Czech Republic\",Replacer.ReplaceText,{\"customer_country\"}),",
                 "    #\"Filtered Rows1\" = Table.SelectRows(#\"Replaced Value\", each true),",
-                "    #\"Added Custom\" = Table.AddColumn(#\"Filtered Rows1\", \"Today's_date\", each Date.From(DateTime.LocalNow()))",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Filtered Rows1\", \"Today's_date\", each Date.From(DateTime.LocalNow())),",
+                "    #\"Filtered Rows2\" = Table.SelectRows(#\"Added Custom\", each true),",
+                "    #\"Inserted Age\" = Table.AddColumn(#\"Filtered Rows2\", \"Age\", each Date.From(DateTime.LocalNow()) - [customer_birth_date], type duration),",
+                "    #\"Inserted Total Years\" = Table.AddColumn(#\"Inserted Age\", \"Total Years\", each Duration.TotalDays([Age]) / 365, type number),",
+                "    #\"Inserted Rounding\" = Table.AddColumn(#\"Inserted Total Years\", \"Round\", each Number.Round([Total Years], 0), type number),",
+                "    #\"Inserted Round Down\" = Table.AddColumn(#\"Inserted Rounding\", \"Round Down\", each Number.RoundDown([Total Years]), Int64.Type),",
+                "    #\"Calculated Total Years\" = Table.TransformColumns(#\"Inserted Round Down\",{{\"Age\", each Duration.TotalDays(_) / 365, type number}}),",
+                "    #\"Rounded Down\" = Table.TransformColumns(#\"Calculated Total Years\",{{\"Age\", Number.RoundDown, Int64.Type}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Rounded Down\",{\"Total Years\", \"Round\", \"Round Down\", \"Today's_date\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Columns\",{{\"Age\", \"customer_age\"}})",
                 "in",
-                "    #\"Added Custom\""
+                "    #\"Renamed Columns\""
               ],
               "type": "m"
             }
@@ -3227,14 +3238,14 @@
             "formatString": "0",
             "lineageTag": "fb440523-1ef5-4168-8afe-0628db970862",
             "sourceColumn": "rental_amount",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "rental_duration",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               }
             ],
             "dataType": "int64",
